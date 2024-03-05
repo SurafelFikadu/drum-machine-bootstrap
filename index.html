@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Drum Machine</title>
+    <script>
+      function play(id) {
+        var audio = document.getElementById(id);
+        audio.play();
+        let inText = document.getElementById('display');
+        if(id === "q" || id === "Q") {
+          inText.innerText = "quo";
+        } else if(id === "w" || id === "W") {
+          inText.innerText = "www";
+        } else if(id === "e" || id === "E") {
+          inText.innerText = "eee";
+        } else if(id === "a" || id === "A") {
+          inText.innerText = "aaa";
+        } else if(id === "s" || id === "S") {
+          inText.innerText = "sss";
+        } else if(id === "d" || id === "D") {
+          inText.innerText = "ddd";
+        } else if(id === "z" || id === "Z") {
+          inText.innerText = "zzz";
+        } else if(id === "x" || id === "X") {
+          inText.innerText = "xxx";
+        } else if(id === "c" || id === "C") {
+          inText.innerText = "ccc";
+        }
+      }
+
+      window.document.onkeyup = function (event) {
+        let keystroke = event.key;
+        if(keystroke === "q" || keystroke === "Q") {
+          play("Q");
+        } else if(keystroke === "w" || keystroke === "W") {
+          play("W");
+        } else if(keystroke === "e" || keystroke === "E") {
+          play("E");
+        } else if(keystroke === "a" || keystroke === "A") {
+          play("A");
+        } else if(keystroke === "s" || keystroke === "S") {
+          play("S");
+        } else if(keystroke === "d" || keystroke === "D") {
+          play("D");
+        } else if(keystroke === "z" || keystroke === "Z") {
+          play("Z");
+        } else if(keystroke === "x" || keystroke === "X") {
+          play("X");
+        } else if(keystroke === "c" || keystroke === "C") {
+          play("C");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container" id="drum-machine">
+
+      <h1 class="text-center">Drum Machine</h1>
+      <div class="card my-3">
+        <div class="card-body">
+          <div class="text-center" id="display">
+            Nothing Yet to display
+          </div>
+        </div>
+      </div>
+
+      <button class="drum-pad btn btn-primary btn-block" id="q" onclick="play('Q')">
+        Q
+        <audio src="./clip/q.m4a" class="clip" id="Q"></audio>
+      </button>
+      <button class="drum-pad btn btn-primary btn-block" id="w" onclick="play('W')">
+        W
+        <audio src="./clip/w.m4a" class="clip" id="W"></audio>
+      </button>
+      <button class="drum-pad btn btn-primary btn-block" id="e" onclick="play('E')">
+        E
+        <audio src="./clip/e.m4a" class="clip" id="E"></audio>
+      </button>
+      <button class="drum-pad btn btn-primary btn-block" id="a" onclick="play('A')">
+        A
+        <audio src="./clip/a.m4a" class="clip" id="A"></audio>
+      </button>
+      <button class="drum-pad btn btn-primary btn-block" id="s" onclick="play('S')">
+        S
+        <audio src="./clip/s.m4a" class="clip" id="S"></audio>
+      </button>
+      <button class="drum-pad btn btn-primary btn-block" id="d" onclick="play('D')">
+        D
+         <audio src="./clip/d.m4a" class="clip" id="D"></audio>
+      </button>
+      <button class="drum-pad btn btn-primary btn-block" id="z" onclick="play('Z')">
+        Z
+        <audio src="./clip/z.m4a" class="clip" id="Z"></audio>
+      </button>
+      <button class="drum-pad btn btn-primary btn-block" id="x" onclick="play('X')">
+        X
+        <audio src="./clip/x.m4a" class="clip" id="X"></audio>
+      </button>
+      <button class="drum-pad btn btn-primary btn-block" id="c" onclick="play('C')">
+        C
+        <audio src="./clip/c.m4a" class="clip" id="C"></audio>
+      </button>
+    </div>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
